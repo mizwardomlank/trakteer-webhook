@@ -49,12 +49,12 @@ def index():
 
 	# Add this code, if you want your computer read the support.
 
-	engine = pyttsx3.init()
-	engine.getProperty('rate')
-	engine.setProperty('rate', 125)
-	engine.say("Traktiran dari" + supporterName)
-	engine.runAndWait()
-	engine.stop()
+	# engine = pyttsx3.init()
+	# engine.getProperty('rate')
+	# engine.setProperty('rate', 125)
+	# engine.say("Traktiran dari" + supporterName)
+	# engine.runAndWait()
+	# engine.stop()
 	
 	timeOut = time.time() + 10 # 10 seconds, you can add the timeout
 
