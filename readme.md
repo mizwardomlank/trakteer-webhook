@@ -25,4 +25,4 @@ Tutorial Video: [video link]
 This part is still on progress
 
 ## Ask
-Join Trakteer Discord Community to ask anything you want. Klik here to join https://discord.gg/hbD6jnzcbR
+Join Trakteer Discord Community to ask anything you want about this project. Click here to join https://discord.gg/hbD6jnzcbR
