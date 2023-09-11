@@ -49,33 +49,32 @@ def index():
 
 	# Add this code, if you want your computer read the support.
 
-	# engine = pyttsx3.init()
-	# engine.getProperty('rate')
-	# engine.setProperty('rate', 125)
-	# engine.say("Traktiran dari" + supporterName)
-	# engine.runAndWait()
-	# engine.stop()
+	engine = pyttsx3.init()
+	engine.getProperty('rate')
+	engine.setProperty('rate', 125)
+	engine.say("Traktiran dari" + supporterName)
+	engine.runAndWait()
+	engine.stop()
 	
-	timeOut = time.time() + 10
+	timeOut = time.time() + 10 # 10 seconds, you can add the timeout
 
 	# Write data on log
 	print('Traktiran dari: ' + supporterName)
 	print('Unit: ' + str(quantity) + ' ' + unit)
 	print('Sebesar: Rp.' + intToIDR(price) )
+	print(price)
+	print(price <= 5000)
 
 	if price <= 5000:
 		while time.time() < timeOut:
-			pydirectinput.keyDown('W')
-		pydirectinput.keyUp('W')
-
+			pydirectinput.keyDown('w') # use lowercase on this function
+		pydirectinput.keyUp('w')
 	elif price <= 10000:
 		while time.time() < timeOut:
-			pydirectinput.press('F')
-
+			pydirectinput.press('f')
 	elif price <= 25000:
 		while time.time() < timeOut:
-			pydirectinput.press('X')
-	
+			pydirectinput.press('x')
 	elif price <= 50000:
 		if supporterMessage:
 			# type something on valorant / game chat
@@ -85,15 +84,12 @@ def index():
 			pydirectinput.keyUp('shift')
 			pyautogui.write(supporterMessage + ' from ' + supporterName)
 			pydirectinput.press('enter')
-
 	elif price <= 100000:
 		while time.time() < timeOut:
 			pydirectinput.keyDown('ctrl')
 		pydirectinput.keyUp('ctrl')
-
 	elif price > 100000:
 		pydirectinput.click()
-
 
 	return ('success', 200)
 
