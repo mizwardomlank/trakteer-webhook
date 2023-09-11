@@ -77,7 +77,7 @@ def index():
 			pydirectinput.press('x')
 	elif price <= 50000:
 		if supporterMessage:
-			# type something on valorant / game chat
+			# type something on game chat
 			pydirectinput.keyDown('shift')
 			pydirectinput.keyDown('enter')
 			pydirectinput.keyUp('enter')
@@ -94,6 +94,6 @@ def index():
 	return ('success', 200)
 
 if __name__ == '__main__':
-  app.run(host='127.0.0.1', port=8080)
+  app.run(host='127.0.0.1', port=8080) # localhost
 
 
